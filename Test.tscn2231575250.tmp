@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c3jrjjyu6586p"]
+
+[ext_resource type="Script" uid="uid://dxy6dbwws0jwe" path="res://deck_manager.gd" id="1_njov2"]
+[ext_resource type="PackedScene" uid="uid://clamq6herhj66" path="res://card.tscn" id="2_2au82"]
+
+[node name="test" type="Node2D" unique_id=78960867]
+
+[node name="DeckManager" type="Node2D" parent="." unique_id=176601104]
+position = Vector2(155, 209)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_njov2")
+
+[node name="Card" parent="DeckManager" unique_id=1098242597 instance=ExtResource("2_2au82")]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://clamq6herhj66"]
+
+[ext_resource type="Texture2D" uid="uid://rf1eer22mbs4" path="res://Sprites/monstro/carta_curupira.png" id="1_kikvd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwxjg"]
+size = Vector2(244, 326)
+
+[node name="Card" type="Node2D" unique_id=1098242597]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1672493928]
+scale = Vector2(0.52409637, 0.52409637)
+texture = ExtResource("1_kikvd")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1498879054]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1475652509]
+shape = SubResource("RectangleShape2D_cwxjg")
