@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://clamq6herhj66"]
 
 [ext_resource type="Texture2D" uid="uid://rf1eer22mbs4" path="res://Sprites/monstro/carta_curupira.png" id="1_kikvd"]
+[ext_resource type="Script" uid="uid://b4ybpfkmqeo5t" path="res://cardPlayer.gd" id="1_rjlel"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cwxjg"]
 size = Vector2(244, 326)
 
 [node name="Card" type="Node2D" unique_id=1098242597]
+script = ExtResource("1_rjlel")
+metadata/type = ""
+metadata/color = ""
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1672493928]
 scale = Vector2(0.52409637, 0.52409637)
@@ -15,3 +19,6 @@ texture = ExtResource("1_kikvd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1475652509]
 shape = SubResource("RectangleShape2D_cwxjg")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
